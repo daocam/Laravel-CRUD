@@ -1,18 +1,12 @@
 @extends('layouts.app')
 @section('content')
     <main class="container">
-        <div class="row">
-            <div class="col-12 text-center pt-2">
-                <h1 class="display-one">Ajouter un étudiant</h1>
-            </div>
-        </div>
-        <hr>
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <div class="card">
+                <div class="card mt-2">
                     <form action="" method="post">
                         @csrf
-                        <div class="card-header">Formulaire</div>
+                        <div class="card-header fs-4">Ajouter un étudiant</div>
                         <div class="card-body">   
                             <div class="control-group col-12 mb-2">
                                 <label for="name">Entrez votre prénom puis votre nom</label>
@@ -43,8 +37,6 @@
                                     @endforeach
                                 </select>
                             </div>
-                        </div>
-                        <div class="card-footer">
                             <input type="submit" class="btn btn-success">
                         </div>
                     </form>

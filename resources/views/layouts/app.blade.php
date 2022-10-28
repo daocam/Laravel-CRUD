@@ -13,9 +13,9 @@
     <title>{{ config('app.name') }}</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg" style="background-color: #f7f7f7;">
+    <nav class="navbar navbar-expand-lg p-3" style="background-color: #f7f7f7;">
         <div class="container">
-            <a class="navbar-brand" href="{{route('etudiant.index')}}">YBSN</a>
+            <a class="navbar-brand fw-bold" href="{{route('etudiant.index')}}">YBSN</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -25,20 +25,18 @@
                         <a class="nav-link" aria-current="page" href="{{route('etudiant.index')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Account</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">My Network</a>
+                        <a class="btn btn-outline-primary" aria-current="page" href="{{route('etudiant.create')}}">Add a student</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search member" aria-label="Search">
-                    <button class="btn btn-outline-primary" type="submit">Go</button>
-                </form>
             </div>
         </div>
     </nav>
     @yield('content')
+    <footer class="py-2 sticky-bottom mt-5" style="background-color: #f7f7f7;">
+        <div class="container text-center">
+            <p><small>Copyright &copy; YBSN - 2022</small></p>
+        </div>
+    </footer>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
 </body>
 </html>

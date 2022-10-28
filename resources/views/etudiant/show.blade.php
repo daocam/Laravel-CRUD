@@ -1,20 +1,16 @@
 @extends('layouts.app')
 @section('content')
     <main class="container">
-        <div class="row">
-            <div class="col-12 pt-2">
-                <a href="{{route('etudiant.index')}}" class="btn btn-outline-primary btn-sm">Retourner</a>
-                <h4 class="display-one mt-5 fw-bold fs-1">{{ $etudiant->name }}</h4> 
-                <hr>
-                <p>Address : <span class="fw-bold">{!! $etudiant->address !!}</span></p>
-                <p>Phone : <span class="fw-bold">{!! $etudiant->phone !!}</span></p>
-                <p>Email : <span class="fw-bold">{!! $etudiant->email !!}</span></p>
-                <p>Birthday : <span class="fw-bold">{!! $etudiant->birth_date !!}</span></p>
-                <p>Country : <span class="fw-bold">{{ $etudiant->EtudiantHasCountry->name }}</span></p>
-            </div>
-            <div class="col-6">
-                <a href="{{route('etudiant.edit', $etudiant->id)}}" class="btn btn-success">Modifier</a>
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Effacer</button>
+        <div class="card mt-5">
+            <h5 class="card-header fw-bold fs-1">{{ $etudiant->name }}</h5>
+            <div class="card-body">
+                <p class="card-text">Address : <span class="fw-bold">{!! $etudiant->address !!}</span></p>
+                <p class="card-text">Phone : <span class="fw-bold">{!! $etudiant->phone !!}</span></p>
+                <p class="card-text">Email : <span class="fw-bold">{!! $etudiant->email !!}</span></p>
+                <p class="card-text">Birthday : <span class="fw-bold">{!! $etudiant->birth_date !!}</span></p>
+                <p class="card-text">Country : <span class="fw-bold">{{ $etudiant->EtudiantHasCountry->name }}</span></p>
+                <a href="{{route('etudiant.edit', $etudiant->id)}}" class="btn btn-primary">Modifier</a>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Effacer</button>               
             </div>
         </div>
 
