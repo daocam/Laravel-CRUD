@@ -1,44 +1,44 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
+<div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card mt-3">
                 <form method="post">
                     @csrf
                     @method('PUT')
-                    <div class="card-header fs-4">Mettre à jour les informations</div>
+                    <div class="card-header fs-4">@lang('lang.title_edit')</div>
                     <div class="card-body">   
                         <div class="control-group col-12 mb-2">
-                            <label for="name">Entrez votre prénom puis votre nom</label>
-                            <input type="text" placeholder="Alex Hobb" id="name" name="name" value="{{ $etudiant->name }}" class="form-control">
+                            <label for="name">@lang('lang.name')</label>
+                            <input type="text" placeholder="@lang('lang.name')" id="name" name="name" value="{{ $etudiant->name }}" class="form-control">
                         </div>
                         <div class="control-group col-12 mb-2">
-                            <label for="address">Entrez votre adresse</label>
-                            <input type="text" placeholder="12 avenue des Bleuet" id="address" name="address" value="{{ $etudiant->address }}" class="form-control">
+                            <label for="address">@lang('lang.address')</label>
+                            <input type="text" placeholder="@lang('lang.address')" id="address" name="address" value="{{ $etudiant->address }}" class="form-control">
                         </div>
                         <div class="control-group col-12 mb-2">
-                            <label for="phone">Entrez votre numéro de téléphone</label>
-                            <input type="phone" placeholder="1-514-254-4532" id="phone" name="phone" value="{{ $etudiant->phone }}" class="form-control">
+                            <label for="phone">@lang('lang.phone')</label>
+                            <input type="phone" placeholder="@lang('lang.phone')" id="phone" name="phone" value="{{ $etudiant->phone }}" class="form-control">
                         </div>
                         <div class="control-group col-12 mb-2">
-                            <label for="email">Entrez votre courriel</label>
-                            <input type="email" placeholder="ad@lest.com" id="email" name="email" value="{{ $etudiant->email }}" class="form-control">
+                            <label for="email">@lang('lang.email')</label>
+                            <input type="email" placeholder="@lang('lang.email')" id="email" name="email" value="{{ $etudiant->email }}" class="form-control">
                         </div>
                         <div class="control-group col-12 mb-2">
-                            <label for="birth_date">Entrez votre date de naissance</label>
+                            <label for="birth_date">@lang('lang.birthday')</label>
                             <input type="date" id="birth_date" name="birth_date" value="{{ $etudiant->birth_date }}" class="form-control">
                         </div>
                         <div class="control-group col-12 mb-2">
-                            <label for="ville">Entrez votre ville</label>
+                            <label for="ville">@lang('lang.country')</label>
                             <select name="ville_id" id="ville" class="form-select">
-                                <option value="">Selectionnez une ville</option>
+                                <option value="">@lang('lang.country')</option>
                                 @foreach($villes as $ville)
                                     <option value="{{$ville->id}}">{{$ville->name}}</option>
                                 @endforeach
                             </select>
                         </div>
-                        <input type="submit" class="btn btn-success">
+                        <input type="submit" value="@lang('lang.submit')" class="btn btn-success">
                     </div>
                 </form>
             </div>

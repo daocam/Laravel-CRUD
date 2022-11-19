@@ -1,0 +1,38 @@
+<?php
+
+// EN folder
+return [
+    'register_user' => 'Register User',
+    'name' => 'Name',
+    'email' => 'Email',
+    'address' => 'Address',
+    'phone' => 'Phone',
+    'birthday' => 'Birthday',
+    'country' => 'Country',
+    'edit' => 'Edit',
+    'delete' => 'Delete',
+    'password' => 'Password',
+    'sign_up' => 'Sign up',
+    'sign_in' => 'Sign in',
+    'registration' => 'Registration',
+    'yes' => 'Yes',
+    'no' => 'No',
+    'upload_file' => 'Upload file',
+    'update_file' => 'Update file',
+    'download' => 'Download',
+    'login' => 'Login',
+    'logout' => 'Logout',
+    'submit' => 'Submit',
+    'document' => 'Documents',
+    'author' => 'Author',
+    'title' => 'Title',
+    'students' => 'Students',
+    'new_student' => 'New student',
+    'filename' => 'Filename in english',
+    'filename_fr' => 'Filename in french',
+    'list_students' => 'List of students',
+    'warning_empty' => 'No elements',
+    'title_edit' => 'Update information',
+    'text_delete' => 'Are you sure you want to delete the student',
+    'text_welcome' => 'Come interact with other students !!!'
+];

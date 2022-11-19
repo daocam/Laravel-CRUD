@@ -17,6 +17,7 @@
     <nav class="navbar navbar-expand-lg p-3" style="background-color: #f7f7f7;">
         <div class="container">
             <a class="navbar-brand fw-bold fs-4" href="{{route('etudiant.index')}}">YBSN</a>
+            <a class="navbar-brand">Hello {{ $name }} !</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

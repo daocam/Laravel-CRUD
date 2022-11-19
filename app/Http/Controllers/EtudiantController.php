@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Etudiant;
 use App\Models\Ville;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class EtudiantController extends Controller
 {
@@ -19,9 +20,13 @@ class EtudiantController extends Controller
         ->orderby('name', 'ASC')
         ->get();
 
-        return view('etudiant.index', [
-            'posts' => $posts
-        ]);
+        if(Auth::check())
+        {
+            $etudiants = Etudiant::all();
+            return view('etudiant.index', [ 'posts' => $posts]);
+        }
+
+        return redirect(route('login'))->withErrors('Vous n\' êtes pas autorisé à accéder au site');    
     }
 
     /**
@@ -50,7 +55,7 @@ class EtudiantController extends Controller
             'phone' => $request->phone,
             'email' => $request->email,
             'birth_date' => $request->birth_date,
-            'ville_id' => $request->ville_id
+            'villes_id' => $request->villes_id
         ]);
             
         return redirect(route('etudiant.show', $newEtudiant->id));

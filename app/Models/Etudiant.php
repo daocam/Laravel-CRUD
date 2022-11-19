@@ -15,11 +15,11 @@ class Etudiant extends Model
         'phone',
         'email',
         'birth_date',
-        'ville_id'
+        'villes_id'
     ];
 
     public function EtudiantHasCountry () 
     {
-        return $this->hasOne('App\Models\Ville', 'id', 'ville_id');
+        return $this->hasOne('App\Models\Ville', 'id', 'villes_id');
     }
 }

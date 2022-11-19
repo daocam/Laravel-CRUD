@@ -1,0 +1,38 @@
+<?php
+
+// FR folder
+return [
+    'register_user' => 'Enregistrer un utilisateur',
+    'name' => 'Nom',
+    'email' => 'Courriel',
+    'address' => 'Adresse',
+    'phone' => 'Téléphone',
+    'birthday' => 'Date de naissance',
+    'country' => 'État',
+    'password' => 'Mot de passe',
+    'edit' => 'Modifier',
+    'delete' => 'Effacer',
+    'sign_up' => 'Enregistrer',
+    'sign_in' => 'Connexion',
+    'students' => 'Étudiants',
+    'new_student' => 'Nouvel étudiant',
+    'registration' => 'S\'inscrire',
+    'login' => 'Se connecter',
+    'logout' => 'Se déconnecter',
+    'document' => 'Documents',
+    'download' => 'Télécharger',
+    'yes' => 'Oui',
+    'no' => 'Non',
+    'author' => 'Auteur',
+    'update_file' => 'Modifier le fichier',
+    'title' => 'Titre',
+    'filename' => 'Nom du fichier en anglais',
+    'filename_fr' => 'Nom du fichier en français',
+    'upload_file' => 'Téléverser un fichier',
+    'submit' => 'Soumettre',
+    'title_edit' => 'Mettre à jour les informations',
+    'list_students' => 'Liste des étudiants',
+    'warning_empty' => 'Aucun éléments',
+    'text_delete' => 'Êtes-vous certain de vouloir supprimer l\'étudiant',
+    'text_welcome' => 'Viens échanger avec les autres étudiants !!!'  
+];

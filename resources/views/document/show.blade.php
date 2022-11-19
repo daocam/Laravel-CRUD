@@ -2,13 +2,10 @@
 @section('content')
     <main class="container my-5">
         <div class="card mt-5">
-            <h5 class="card-header fw-bold fs-1">{{ $etudiant->name }}</h5>
+            <h5 class="card-header fw-bold fs-1">{{ $document->title }}</h5>
             <div class="card-body">
-                <p class="card-text">@lang('lang.address') : <span class="fw-bold">{!! $etudiant->address !!}</span></p>
-                <p class="card-text">@lang('lang.phone') : <span class="fw-bold">{!! $etudiant->phone !!}</span></p>
-                <p class="card-text">@lang('lang.email') : <span class="fw-bold">{!! $etudiant->email !!}</span></p>
-                <p class="card-text">@lang('lang.birthday') : <span class="fw-bold">{!! $etudiant->birth_date !!}</span></p>
-                <a href="{{route('etudiant.edit', $etudiant->id)}}" class="btn btn-primary">@lang('lang.edit')</a>
+                <p class="card-text"><span class="fw-bold">{!! $document->title !!}</span></p>
+                <a href="{{route('document.edit', $document->id)}}" class="btn btn-primary">@lang('lang.edit')</a>
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">@lang('lang.delete')</button>               
             </div>
         </div>
@@ -17,7 +14,7 @@
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form action="{{route('etudiant.edit', $etudiant->id )}}" method="post">
+                    <form action="{{route('document.edit', $document->id )}}" method="post">
                         @method('DELETE')
                         @csrf
                         <div class="modal-header bg-danger text-white">
@@ -25,7 +22,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            @lang('lang.text_delete') : <p><strong>{{ $etudiant->name }}</strong></p>
+                            @lang('lang.text_delete') : <p><strong>{{ $document->title }}</strong></p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary" data-bs-dismiss="modal">@lang('lang.no')</button>
